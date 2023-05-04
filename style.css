@@ -1,0 +1,83 @@
+body{
+    text-align:center;
+    background-color:rgb(50, 57, 98);
+    color:whitesmoke;
+    text-shadow: 3px 0 crimson;
+}
+
+.title{
+    font-size:5rem;
+    font-family:"Arvo",cursive;
+    
+}
+
+.buttons{
+    position:relative;
+    margin:10% auto;
+    width:100%;
+}
+.btn-cont{
+    display:inline-block;
+    margin: 1rem 1rem;
+}
+.btn{
+    position:relative;
+    bottom:0;
+    font-size:4.25rem;
+    font-weight:bolder;
+    font-family:"Arvo",cursive;
+    outline:0.4rem solid rgb(107, 118, 185);
+    width:8.5rem;
+    height:8.5rem;
+    padding:2.25rem 0 0;
+    border-radius: 0.5rem;
+    color:crimson;
+    text-shadow:2.5px 0 lightgray;
+    transition: ease-in-out  0.2s;
+    
+}
+
+.btn:hover{
+    bottom:0.25rem;
+    background-color: #e3e3e3;
+    cursor: pointer;
+    transform: scale(1.04);
+    transition: 0.1s ease-in-out;
+    z-index : 1;
+    
+}
+
+.w-button{
+    background-image: url("drum-images/crash.png");
+    background-size: 100%;
+}
+.a-button{
+    background-image: url("drum-images/kick.png");
+    background-size: 100%;
+}
+.s-button{
+    background-image: url("drum-images/snare.png");
+    background-size: 100%;
+}
+.d-button{
+    background-image: url("drum-images/tom1.png");
+    background-size:100%;
+}
+.j-button{
+    background-image: url("drum-images/tom2.png");
+    background-size:100%;
+}
+.k-button{
+    background-image: url("drum-images/tom3.png");
+    background-size: 100%;
+}
+.l-button{
+    background-image: url("drum-images/tom4.png");
+    background-size: 100%;
+}
+
+
+
+.bor{
+    text-transform:uppercase
+}
