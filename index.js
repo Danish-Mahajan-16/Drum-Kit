@@ -3,6 +3,14 @@
 // }
 
 
+
+const addEffects = (key)=>{
+    
+    document.querySelector(`#${key}`).classList.toggle("btn-effect")
+
+}
+
+
 // General function to play sound on specific cases
 function makeSound(parameter){
     let audio;
@@ -44,6 +52,10 @@ while(drumNumber<document.querySelectorAll(".btn").length){
     document.querySelectorAll(".btn")[drumNumber].addEventListener("click", function () {
             let buttonHTML = this.innerHTML;
             makeSound(buttonHTML);
+            addEffects(buttonHTML);
+            setTimeout(()=>{
+                document.querySelector(`#${buttonHTML}`).classList.toggle("btn-effect");
+            },250)
     });
     drumNumber++;
 }
@@ -52,8 +64,13 @@ while(drumNumber<document.querySelectorAll(".btn").length){
 function pressedKey(event){
     let key = event.key;
     makeSound(key);
+    addEffects(key);
     
 }
 
 // Sounds are played when relevant keys are pressed
 document.addEventListener("keydown", pressedKey)
+document.addEventListener("keyup", function(event){
+    let key = event.key;
+    document.querySelector(`#${key}`).classList.toggle("btn-effect");
+})
