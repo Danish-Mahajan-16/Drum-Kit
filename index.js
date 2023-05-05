@@ -5,9 +5,7 @@
 
 
 const addEffects = (key)=>{
-    
-    document.querySelector(`#${key}`).classList.toggle("btn-effect")
-
+    document.querySelector(`#${key}`).classList.add("btn-effect");
 }
 
 
@@ -54,8 +52,8 @@ while(drumNumber<document.querySelectorAll(".btn").length){
             makeSound(buttonHTML);
             addEffects(buttonHTML);
             setTimeout(()=>{
-                document.querySelector(`#${buttonHTML}`).classList.toggle("btn-effect");
-            },250)
+                document.querySelector(`#${buttonHTML}`).classList.remove("btn-effect");
+            },150) // Class "btn-effect will be removed after 150ms or 0.15s"
     });
     drumNumber++;
 }
